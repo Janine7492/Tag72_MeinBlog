@@ -1,0 +1,38 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  padding: 2rem;
+  font-size: 10px;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.btn {
+  display: inline-block;
+  width: 70px;
+  border-radius: 8px;
+  box-shadow: 2px 2px 5px dimgray;
+  padding: 0.8rem;
+  background-color: whitesmoke;
+  margin: 2rem;
+  font-size: 1.8rem;
+  text-decoration: none;
+  text-align: center;
+  color: purple;
+  font-weight: bold;
+}
+
+.btn:active {
+  box-shadow: inset 2px 2px 5px dimgrey
+}
+
+.backBtn {
+  font-size: 1.6rem;
+  margin-top: 1rem;
+  text-decoration: none;
+  color: purple;
+}

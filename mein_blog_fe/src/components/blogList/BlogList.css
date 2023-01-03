@@ -1,0 +1,51 @@
+.headlineBlog {
+    font-size: 3rem;
+    margin: 5rem auto 2rem auto;
+    text-align: center;
+}
+
+.descrBlog {
+    font-size: 1.8rem;
+    text-align: center;
+}
+
+.big {
+    font-weight: bolder;
+    color: purple;
+}
+
+.postListWrapper {
+    width: 90%;
+    margin: 5rem auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.postListWrapper img {
+    width: 100%;
+    height: 80%;
+    object-fit: cover;
+    margin: 0 auto;
+}
+
+.blogItem {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    /* padding-left: 2rem; */
+}
+
+.blogItem h2 {
+    font-size: 2rem;
+    padding-left: 1rem;
+}
+
+.blogItem a {
+    display: inline-block;
+    align-self: flex-end;
+    padding-right: 1rem;
+    text-decoration: none;
+    color: purple;
+}

@@ -1,0 +1,14 @@
+.editorPage {
+    width: 100%;
+    height: 95vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(209, 206, 202, 0.833);
+}
+
+.headlineEditor {
+    font-size: 2.5rem;
+    margin: 2rem auto;
+}
