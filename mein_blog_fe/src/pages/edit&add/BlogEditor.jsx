@@ -1,5 +1,5 @@
 import "./BlogEditor.css"
-import BlogAdd from "../components/blogAdd/BlogAdd.jsx"
+import BlogAdd from "../../components/blogAdd/BlogAdd.jsx"
 
 const BlogEditor = ({ setPosts }) => {
     return (

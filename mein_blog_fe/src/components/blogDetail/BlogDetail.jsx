@@ -5,9 +5,10 @@ import { Link, useParams } from "react-router-dom";
 const BlogDetail = (props) => {
 
     let params = useParams();
-    console.log(params.id);
-
     let id = params.id;
+
+    let index = props.posts.findIndex((post) => post.id === id);
+
 
     // const [posts, setPosts] = useState([]);
 
@@ -23,11 +24,11 @@ const BlogDetail = (props) => {
         <>
             <Link to="/blog" className="backBtn" >Zurück zum Blog</Link>
             <section className="topSecDetail">
-                <img src={`http://localhost:9898/${props.posts[id].picture}`} alt={props.posts[id].title} />
-                <h2>{props.posts[id].title}</h2>
+                <img src={`http://localhost:9898/${props.posts[index].picture}`} alt={props.posts[index].title} />
+                <h2>{props.posts[index].title}</h2>
             </section>
             <section className="lowerSecDetail">
-                <p>{props.posts[id].text}</p>
+                <p>{props.posts[index].text}</p>
             </section>
         </>
     )

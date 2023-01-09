@@ -1,7 +1,8 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import './App.css';
 import BlogPage from "./pages/BlogPage.jsx";
-import BlogEditor from "./pages/BlogEditor.jsx";
+import EditorBlogPage from "./pages/edit&add/EditorBlogPage";
+import BlogEditor from "./pages/edit&add/BlogEditor";
 import Landing from "./pages/LandingPage.jsx";
 import Loading from "./pages/LoadingPage.jsx";
 import BlogDetail from "./components/blogDetail/BlogDetail.jsx";
@@ -22,9 +23,10 @@ function App() {
         <Routes>
 
           <Route path="/" element={<Landing />} />
-          <Route path="/loading" element={<Loading />} />
+          <Route path="/loading/:direction" element={<Loading />} />
           <Route path="/blog" element={<BlogPage setPosts={setPosts} posts={posts} />} />
-          <Route path="/edit" element={<BlogEditor setPosts={setPosts} posts={posts} />} />
+          <Route path="/edit/blog" element={<EditorBlogPage setPosts={setPosts} posts={posts} />} />
+          <Route path="/edit/:id" element={<BlogEditor setPosts={setPosts} posts={posts} />} />
           <Route path="/detail/:id" element={<BlogDetail posts={posts} />} />
 
         </Routes>
