@@ -23,9 +23,11 @@ const EditBlogItem = (props) => {
             <section className="blogItem">
                 <img src={`http://localhost:9898/${props.image}`} alt={props.title} />
                 <h2>{props.title}</h2>
-                <Link to={`/detail/${props.id}`} >Lies mehr</Link>
-                <Link to={`/edit/${props.id}`}><FaPencilAlt /></Link>
-                <button type="button" onClick={deletePost} ><FaTrashAlt /></button>
+                <Link className="readBtn" to={`/detail/${props.id}`} >Lies mehr</Link>
+                <div className="editBtnWrapper">
+                    <Link className="editBtn" to={`/edit/${props.id}`}><button type="button" className="editBtnBtn"><FaPencilAlt /></button></Link>
+                    <button className="deleteBtn" type="button" onClick={deletePost} ><FaTrashAlt /></button>
+                </div>
             </section>
         </>
     )

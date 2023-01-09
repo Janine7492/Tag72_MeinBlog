@@ -8,16 +8,6 @@ const EditorBlogPage = (props) => {
     console.log("props EditorBlogPage: ", props);
     console.log(props.posts);
 
-    // const [currPosts, setCurrPosts] = useState([]);
-
-    // useEffect(() => {
-    //     fetch('http://localhost:9898/blog')
-    //         .then(response => response.json())
-    //         .then(data => setCurrPosts(data))
-    // }, []);
-
-    // console.log("currPosts: ", currPosts);
-
     return (
         <>
             <Link to="/loading/add" className="backBtn">Blogbeitrag hinzufügen</Link>
