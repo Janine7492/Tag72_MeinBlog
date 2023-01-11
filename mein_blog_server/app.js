@@ -8,7 +8,6 @@ import { uid } from 'uid';
 const app = express();
 const PORT = 9898;
 
-const idNo = uid()
 
 const upload = multer({ dest: './public' })
 
@@ -77,19 +76,19 @@ app.put('/blog/edit/:id', (req, res) => {
     // Post not found
     if (indexOfPost === -1) {
         return res.status(404).send("Could not find the post with ID: ", id);
-    };
+    }
 
     if (title) {
         blogPosts[indexOfPost].title = title;
-    };
+    }
 
     if (picture) {
         blogPosts[indexOfPost].picture = picture;
-    };
+    }
 
     if (text) {
         blogPosts[indexOfPost].text = text;
-    };
+    }
 
     fs.writeFile("./data.json", JSON.stringify(blogPosts), (err) => {
         if (err) return console.log(err);
